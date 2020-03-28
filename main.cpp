@@ -108,7 +108,8 @@ void menu(char username[])
 	cout << "\n0. Add flight database.";
 	cout << "\n1. Book a flight.";
 	cout << "\n2. View flight list.";
-	cout << "\n3. Exit.";
+	cout << "\n3. View database of people accessing program.";
+	cout << "\n4. Exit.";
 	
 	cout << "\nWhat would you like to do today?\n";
 	cin >> choice;
@@ -131,7 +132,15 @@ void menu(char username[])
 			CLEAR;
 			displayFlights(username);
 			break;
+			
 		case 3:
+			cout << "Database:\n";
+			system("type Data.txt");
+			system("pause");
+			menu(username);
+			break;
+			
+		case 4:
 			cout << "Thank you!\n";
 			system("pause");
 			break;
