@@ -1,7 +1,10 @@
 #include "iostream"
 #include "string"
 #include "cstring"
+#include "fstream"
+
 #define CLEAR system("cls")
+
 using namespace std;
 class flights  {		
 	protected:
@@ -99,7 +102,7 @@ class details : public flights {
 		}
 void menu(char username[])
 {
-	system("cls");
+	CLEAR;
 	int choice, flights;	
 	cout << "\nWelcome " << username << "!\n";
 	cout << "\n0. Add flight database.";
@@ -149,10 +152,13 @@ int main()
 
 	char username[100];
 	char x;
-	
+	fstream file;
+	file.open("Data.txt", ios::out | ios::app);
 	cout << "Enter your name to get started: ";
 	scanf(" %[^\n]%*c", &username);
-	system("cls");
+	file << username << endl;
+	file.close();
+	CLEAR;
 	obj1.menu(username);
 	
 	return 0;
