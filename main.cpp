@@ -134,7 +134,9 @@ void menu(char username[])
 			break;
 		
 		default:
-			cout << "wot did u du m8.";
+			cout << "Incorrect Option\n";
+			system("pause");
+			menu(username);
 			break;
 	}
 }
