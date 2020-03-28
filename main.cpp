@@ -1,7 +1,7 @@
 #include "iostream"
 #include "string"
 #include "cstring"
-
+#define CLEAR system("cls")
 using namespace std;
 class flights  {		
 	protected:
@@ -115,17 +115,17 @@ void menu(char username[])
 		case 0:
 			cout << "How many fights are you going to add?\n";
 			cin >> flights;
-			system("cls");
+			CLEAR;
 			updateFlights(flights, username);
 			break;
 			
 		case 1:
-			system("cls");
+			CLEAR;
 			get(username);
 			break;
 		
 		case 2:
-			system("cls");
+			CLEAR;
 			displayFlights(username);
 			break;
 		case 3:
