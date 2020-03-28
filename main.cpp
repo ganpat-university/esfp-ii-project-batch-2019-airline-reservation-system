@@ -33,6 +33,7 @@ class details : public flights {
 		void updateFlights(int n, char username[])
 		{
 			cout << "\nWelcome " << username << "!\n\n";
+			n += count;
 			for(int i = count; i < n; i++)
 			{
 				cout << "Enter route #" << i+1 << ":";
